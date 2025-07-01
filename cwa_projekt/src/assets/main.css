@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    body {
+        @apply font-[Open_Sans] bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+    } 
+}
+
+@theme {
+    --color-chestnut: #782F29;  
+    /*--animate-wiggle: wiggle 1s ease-in-out infinite;*/
+    /*@keyframes wiggle {
+        0%,
+        100% {
+        transform: rotate(-45deg);
+        }
+        50% {
+        transform: scale(10);
+        }
+    }*/
+}
+
+@layer components {
+    
+}
+
+@layer utilities {
+    .btn-transition {
+        @apply transition-transform duration-500;
+    }
+    .btn-transition:hover {
+        @apply -translate-y-0.5 scale-105;
+    }
+
+    .btn-transition.btn-down:hover {
+        @apply translate-y-0.5 scale-105;
+    }
+
+    .btn-transition:hover:active {
+        @apply transition-transform duration-100 scale-95
+    }
+
+    .input-field::-webkit-outer-spin-button,
+    .input-field::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .input-field[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .shadow-dark-color {
+        @apply dark:shadow-black/30;
+    }
+
+    .theme-colors {
+        @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+    }
+}
