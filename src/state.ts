@@ -84,11 +84,11 @@ export const useGlobalStore = defineStore('globalStore', {
       { date: "2026", isVisible: true }
     ] as {date: string, isVisible: boolean}[],
     finances: [
-      // Keine echten Werte :)
+      // Keine echten Werte
       {id: 1, name: "Miete", value: -670.59, valueList: [], from: "Konto", date: "2025-06-02T12:00", 
       categories: ['Miete'],
       description: "Monatliche Miete der Wohnung", 
-      isRecurring: true, recurringCycle: 'monthly', isNotification: true, notificationDate: '2025-06-02T12:00', notificationText: "Die Miete von -670.59€ wurde abgezogen.", 
+      isRecurring: false, recurringCycle: 'none', isNotification: true, notificationDate: '2025-06-02T12:00', notificationText: "Die Miete von -670.59€ wurde abgezogen.", 
       isExtraValuesVisible: false },
       
       {id: 2 ,name: "Bestellung Amazon", value: -39.99, valueList: [], from: "Konto", date: "2025-06-28T12:10", 
@@ -103,7 +103,7 @@ export const useGlobalStore = defineStore('globalStore', {
       isRecurring: false, recurringCycle: 'none', isNotification: false, notificationDate: '', notificationText: "", 
       isExtraValuesVisible: false },
       
-      {id: 4, name: "Einkauf Kaufland", value: -1.37, 
+      {id: 4, name: "Einkauf", value: -1.37, 
       valueList: [{title: "Wurst", value: -2.49}, {title: "Brot", value: -2.79}, {title: "Käse", value: -2.29},{title: "Wasser-1l", value: -0.30}, {title: "Pfand", value: 6.50}], 
       from: "Bar", date: "2025-06-20T16:10", 
       categories: ['Einkauf'],
@@ -114,13 +114,13 @@ export const useGlobalStore = defineStore('globalStore', {
       {id: 5, name: "Internet-Vertrag", value: -49.99, valueList: [], from: "Konto", date: "2025-05-15T10:00", 
       categories: ['Vertrag'],
       description: "Monatlich anfallender Vertrag für Internet.",
-      isRecurring: true, recurringCycle: 'monthly', isNotification: true, notificationDate: '2025-05-14T10:00', notificationText: "Bald fallen -49.99€ für den Internet-Vertrag an.", 
+      isRecurring: false, recurringCycle: 'none', isNotification: true, notificationDate: '2025-05-14T10:00', notificationText: "Bald fallen -49.99€ für den Internet-Vertrag an.", 
       isExtraValuesVisible: false },
       
       {id: 6, name: "Taschengeld", value: 25, valueList: [], from: "Bar", date: "2025-06-01T12:00", 
       categories: ['Besonderes'],
       description: "Wöchentliches Taschengeld.",
-      isRecurring: true, recurringCycle: 'weekly', isNotification: false, notificationDate: '', notificationText: "",
+      isRecurring: false, recurringCycle: 'none', isNotification: false, notificationDate: '', notificationText: "",
       isExtraValuesVisible: false },
       
       {id: 7, name: "Weihnachten", value: 300, valueList: [], from: "Konto", date: "2024-12-24T18:00", 
@@ -129,7 +129,7 @@ export const useGlobalStore = defineStore('globalStore', {
       isRecurring: false, recurringCycle: 'none', isNotification: false, notificationDate: '', notificationText: "",
       isExtraValuesVisible: false },
       
-      {id: 8, name: "Einkauf Lidl", value: -4.27, 
+      {id: 8, name: "Einkauf", value: -4.27, 
       valueList: [{title: "Apfel", value: -1.49}, {title: "Brot", value: -2.79}, {title: "Käse", value: -3.49}, {title: "Pfand", value: 3.50}], 
       from: "Bar", date: "2025-06-13T11:10", 
       categories: ['Einkauf'],
